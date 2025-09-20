@@ -246,12 +246,12 @@ module BasicTestProto2
     def test_file_descriptor
       file_descriptor = TestMessage.descriptor.file_descriptor
       refute_nil file_descriptor
-      assert_equal "tests/basic_test_proto2.proto", file_descriptor.name
+      assert_equal "basic_test_proto2.proto", file_descriptor.name
       assert_equal :proto2, file_descriptor.syntax
 
       file_descriptor = TestEnum.descriptor.file_descriptor
       refute_nil file_descriptor
-      assert_equal "tests/basic_test_proto2.proto", file_descriptor.name
+      assert_equal "basic_test_proto2.proto", file_descriptor.name
       assert_equal :proto2, file_descriptor.syntax
     end
 

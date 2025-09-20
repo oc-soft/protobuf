@@ -24,6 +24,8 @@ class RepeatedFieldTest < Test::Unit::TestCase
     arr_methods -= [:intersection, :deconstruct, :resolve_feature_path]
     # ruby 3.1 methods we can ignore
     arr_methods -= [:intersect?]
+    # ruby 3.4 methods we can ignore
+    arr_methods -= [:fetch_values]
     arr_methods.each do |method_name|
       assert_respond_to m.repeated_string, method_name
     end
