@@ -11,7 +11,7 @@ if RUBY_PLATFORM == "java"
 else
   begin
     require "google/#{RUBY_VERSION.sub(/\.\d+$/, '')}/protobuf_c"
-  rescue LoadError
+  rescue NameError, LoadError
     require 'google/protobuf_c'
   end
 end
